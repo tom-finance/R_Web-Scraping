@@ -32,6 +32,8 @@ download.file(link, path, mode = "wb")
 # read data into R
 data <- read.csv(path, skipNul = TRUE, sep = '\t',header = TRUE, fileEncoding = "UTF-16LE")
 
+# delete download if needed
+unlink(path)
 
 # alternative: direkt import into R without file download
 data <- read.csv(link, skipNul = TRUE, sep = '\t',header = TRUE, fileEncoding = "UTF-16LE")
