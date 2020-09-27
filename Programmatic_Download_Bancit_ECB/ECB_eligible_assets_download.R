@@ -12,7 +12,7 @@ library(rvest)
 
 # extract most recent download link
 link <- read_html("https://www.ecb.europa.eu/paym/coll/assets/html/list-MID.en.html") %>%
-  html_nodes("tr:nth-child(2) .csv") %>% # html node extracted with selector gadget
+  html_nodes("tr:nth-child(1) .csv") %>% # html node extracted with selector gadget
   html_attr("href") %>% # extract link to download
   paste0("https://www.ecb.europa.eu", .) # create full path from relative path
 
