@@ -40,7 +40,7 @@ status_code(r)
 # 404 Not Found
 
 # check content
-str(content(r))
+str(content(r, encoding = "UTF-8"))
 
 # get content into data frame
 cont <- content(r, encoding = "UTF-8")
